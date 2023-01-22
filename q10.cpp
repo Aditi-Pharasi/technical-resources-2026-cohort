@@ -1,9 +1,8 @@
 #include <iostream>
 #include<math.h>
-
+#include <bits/stdc++.h>
 using namespace std;
-int prime(int t){        
-    cin >>t;
+int prime(int t){
     while(t>0){
         int n;
         cin>>n;
@@ -15,9 +14,9 @@ int prime(int t){
             }
          }
         if (p==1){
-            return 0;
+            return false;
             //cout<<"this is not prime number";
-            }else{return 1;
+            }else{return true;
                 //cout<<"this is a prime number";}
         t--;
     }
