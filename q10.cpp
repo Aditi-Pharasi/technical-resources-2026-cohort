@@ -1,33 +1,33 @@
 #include <iostream>
-#include<math.h>
-#include <bits/stdc++.h>
+#include <cmath>
 using namespace std;
-int prime(int t){
-    while(t>0){
-        int n;
-        cin>>n;
-        int p=0;
-        for (int i=2;i<n;i++){
-            if(n%i==0){
-                p=1;
-                break;
-            }
-         }
-        if (p==1){
-            return false;
-            //cout<<"this is not prime number";
-            }else{return true;
-                //cout<<"this is a prime number";}
-        t--;
+
+
+bool isPrime(int n) {
+    if (n <= 1) {
+        return false;
     }
-}
-}
-int main(){
-    int n;
-    cin >> n;
-    for(int i=2; i<=n; i++){
-        if (n%i=0 && prime(i)){
-            cout<<i<<"is a prime factor of "<<n<<endl;
+
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0) {
+            return false;
         }
     }
+
+    return true;
+}
+
+int main() {
+    int n;
+    cin >> n;
+
+    cout << "Prime factors of " << n << " are: ";
+    for (int i = 2; i <= n; i++) {
+        if (n % i == 0 && isPrime(i)) {
+            cout << i << " ";
+        }
+    }
+
+    cout << endl;
+    return 0;
 }
