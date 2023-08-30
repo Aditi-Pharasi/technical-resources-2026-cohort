@@ -7,7 +7,7 @@ int main(){
     int n;
     cout<<"enter the no. whose inverse is to be found: ";
     cin >> n;
-    
+    cout<<"tring creating new branch "<<endl;
     int counter=1;
     int ans=0;
     while(n!=0){
